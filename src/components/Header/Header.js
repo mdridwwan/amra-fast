@@ -1,26 +1,24 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
-import logo from '../../images/logo.png';
 import './Header.css';
+import Navbar from './navbar';
+import Slider from './Slider';
 
 
 const Header = () => {
     const { user, logOut } = useAuth();
     return (
-        <div className="header">
-            <img className="logo" src={logo} alt="" />
-            <nav>
-                <NavLink to="/shop">Shop</NavLink>
-                <NavLink to="/review">Order Review</NavLink>
-                <NavLink to="/inventory">Manage Inventory</NavLink>
-                {user.email && <span style={{ color: 'white' }}>Hello {user.displayName} </span>}
-                {
-                    user.email ?
-                        <button onClick={logOut}>log out</button>
-                        :
-                        <NavLink to="/login">Login</NavLink>}
+        <div className="header ">
+            <Navbar></Navbar>
+           
+            <nav className="d-flex justify-content-center">
+                <NavLink to="/home">Home</NavLink>
+                <NavLink to="/services">Services</NavLink>
+                <NavLink to="/review">My Cart</NavLink>
+                <NavLink to="/inventory">Order Manage</NavLink>
             </nav>
+           
         </div>
     );
 };

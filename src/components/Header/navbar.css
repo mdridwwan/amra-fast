@@ -1,0 +1,22 @@
+.navstyle{
+    background-color: rgb(6, 3, 180);
+    color: white;
+}
+.nav-menu{
+    /* align-items-center d-flex justify-content-around */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar-brand{
+    color: rgb(255 255 255);
+    font-size: 30px;
+    padding: 10px 60px;
+    font-family: cursive;
+}
+.icon{
+    border: 1px solid white;
+    color: white;
+    border-radius: 5px;
+}
